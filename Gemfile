@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '2.4.0'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -51,3 +52,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Additional GEMS ~~~~~
+# Allows for password/password_confirmation/password_digest
+gem 'bcrypt'
+
+
+
+
+
