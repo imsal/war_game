@@ -1,7 +1,7 @@
 ﻿class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    sort_leaders
   end
 
   # Signup Page //
@@ -37,7 +37,13 @@
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :user_name)
+  end
+
+  # sorts leaderboard by highest number of wins
+  def sort_leaders
+    @users = User.all
+    @users = @users.sort_by {|user| user[:wins]}.reverse
   end
 
 end

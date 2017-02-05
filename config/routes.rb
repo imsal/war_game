@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-
   root 'static_pages#welcome'
+  get '/leaderboard', to: 'users#index'
+
 
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'

@@ -1,1 +1,23 @@
-<h1>USER INDEX</h1>
+<!-- Leadboard page -->
+
+<h1>War Leaderboard</h1>
+
+
+<table>
+<thead>
+<th>User Name</th>
+<th>Total Wins</th>
+<th>Total Losses</th>
+</thead>
+<% if @users.any? %>
+<tbody>
+  <% @users.each do |user| %>
+  <tr>
+  <td><%= user.user_name %></td>
+  <td><%= user.wins %></td>
+  <td><%= user.losses %></td>
+  </tr>
+  <% end %>
+</tbody>
+<% end %>
+</table>
