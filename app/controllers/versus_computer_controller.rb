@@ -1,0 +1,2 @@
+class VersusComputerController < ApplicationController
+end

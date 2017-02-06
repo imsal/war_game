@@ -1,0 +1,8 @@
+// The only thing needed to add bootstrap to rails is add the gemfile
+// gem 'bootstrap-sass'
+// and the below two imports
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// continue below

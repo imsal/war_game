@@ -13,6 +13,7 @@
     @user = User.new(user_params)
 
     if @user.save
+      log_in @user
       flash[:notice] = 'Your account has been successfully created!'
       redirect_to @user
     else

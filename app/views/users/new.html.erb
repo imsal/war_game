@@ -1,5 +1,6 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<h1>Create a new account</h1>
+<p>Please enter the below information to create your account.</p>
+
 
 <%= form_for(@user) do |f| %>
 
@@ -12,22 +13,23 @@
   </ul>
   <% end %>
 
-
+<div class="form-group">
   <%= f.label :name %>
-  <%= f.text_field :name %> <br/>
+  <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %><br />
 
   <%= f.label :user_name %>
-  <%= f.text_field :user_name %> <br/>
+  <%= f.text_field :user_name, class: 'form-control', placeholder: 'User Name' %><br/>
 
   <%= f.label :email %>
-  <%= f.email_field :email %> <br />
+  <%= f.email_field :email, class: 'form-control', placeholder: 'Email Address' %> <br />
 
   <%= f.label :password %>
-  <%= f.password_field :password %> <br />
+  <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %> <br />
 
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %> <br />
+  <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation' %> <br />
 
-  <%= f.submit 'Create Account' %>
+  <%= f.submit 'Create Account', class: 'btn btn-default' %>
+</div>
 
 <% end %>

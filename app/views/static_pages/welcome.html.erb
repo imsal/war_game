@@ -1,9 +1,13 @@
-<h1>Welcome to The Game of WAR!</h1>
+<h1 class='text-center'>Welcome to The Game of WAR!</h1>
 
-<p><%= link_to 'Log In', '#' %></p>
-<p><%= link_to 'Sign Up', signup_path %></p>
-<p><%= link_to 'View Leaderboards', leaderboard_path %></p>
-<p><%= link_to 'Rules', '#' %></p>
-<p><%= link_to 'About', '#' %></p>
+<br />
 
-<%#= image_tag ('cards/10_of_clubs') %>
+<div class="text-center">
+<% if logged_in? %>
+<%= link_to 'Play a random player', '#', class: 'btn btn-primary' %>
+<%= link_to 'Play a friend', '#', class: 'btn btn-primary' %>
+<%= link_to 'Play a computer', '#', class: 'btn btn-primary' %>
+<% else %>
+<%= link_to 'Login to Play!', login_path , class: 'btn btn-primary' %>
+<% end %>
+</div>

@@ -56,7 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Additional GEMS ~~~~~
 # Allows for password/password_confirmation/password_digest
 gem 'bcrypt'
-
+# BOOSTRAP
+gem 'bootstrap-sass'
 
 
 
